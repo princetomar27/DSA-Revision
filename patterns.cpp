@@ -239,9 +239,34 @@ void pattern16(int n)
     }
 }
 
+void pattern18(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+            cout << " ";
+
+        // characters
+        char ch = 'A';
+        int reversePoint = (2 * i + 1) / 2;
+        for (int j = 1; j <= 2 * i + 1; j++)
+        {
+            cout << ch << " ";
+            if (j <= reversePoint)
+                ch++;
+            else
+                ch--;
+        }
+
+        for (int j = 0; j < n - i - 1; j++)
+            cout << " ";
+        cout << endl;
+    }
+}
+
 int main()
 {
     int n;
     cin >> n;
-    pattern16(n);
+    pattern18(n);
 }
