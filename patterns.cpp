@@ -123,9 +123,47 @@ void pattern9(int n)
     pattern8(n);
 }
 
+void pattern10(int n)
+{
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        int val = i;
+        if (i > n)
+        {
+            val = 2 * n - i;
+        }
+        for (int j = 0; j < val; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void pattern11(int n)
+{
+    int val = 1;
+    for (int i = 0; i < n; i++)
+    {
+        // if row is even
+        if (i % 2 == 0)
+            val = 1;
+        else
+            val = 0;
+
+        for (int j = 0; j <= i; j++)
+        {
+            cout << val;
+            // flip the val
+            val = 1 - val;
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int n;
     cin >> n;
-    pattern9(n);
+    pattern11(n);
 }
