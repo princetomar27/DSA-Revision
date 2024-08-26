@@ -293,5 +293,5 @@ int main()
 {
     int n;
     cin >> n;
-    pattern18(n);
+    pattern14(n);
 }
